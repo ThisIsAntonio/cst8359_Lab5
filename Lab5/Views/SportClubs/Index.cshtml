@@ -1,0 +1,57 @@
+﻿@model Lab5.Models.ViewModels.NewsViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.SportClubs.FirstOrDefault().Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SportClubs.FirstOrDefault().Fee)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var club in Model.SportClubs)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => club.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => club.Fee)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@club.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@club.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@club.Id">Delete</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <strong>Subscribed Fans:</strong>
+                    <ul>
+                        @foreach (var subscription in Model.Subscriptions.Where(s => s.SportClubId == club.Id))
+                        {
+                            var fan = Model.Fans.FirstOrDefault(f => f.Id == subscription.FanId);
+                            if (fan != null)
+                            {
+                                <li>@fan.FullName</li>
+                            }
+                        }
+                    </ul>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
