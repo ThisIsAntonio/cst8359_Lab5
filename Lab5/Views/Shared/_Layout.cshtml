@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"] - Lab 5</title>
+    <link rel="stylesheet" type="text/css" href="~/css/StyleSheet.css" />
+</head>
+<body>
+    <header>
+        <h1>Welcome to Lab 5</h1>
+        <nav>
+            @Html.ActionLink("Home", "Index", "Home")
+        </nav>
+    </header>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer>
+        <p>&copy; 2024 - Lab 5</p>
+    </footer>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>
