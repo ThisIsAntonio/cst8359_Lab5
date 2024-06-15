@@ -13,5 +13,6 @@
     <WebStackScaffolding_DbContextTypeFullName>Lab5.Data.SportsDbContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
+    <NameOfLastUsedPublishProfile>D:\AC\Level6\CST8359\Lab5\Lab5\Properties\PublishProfiles\marcosa-lab5 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>
