@@ -3,5 +3,5 @@
 **/obj/
 **/bin/
 .vs/
-**/appsettings.json
-**/appsettings.Development.json
+Lab5/appsettings.json
+Lab5/appsettings.Development.json
